@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CyberSafe | Segurança Digital</title>
+<style>
+:root {
+  --blue:#0756c9;
+  --dark:#10213d;
+  --light:#f2f7ff;
+  --green:#16a779;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  background:var(--light);
+  color:var(--dark);
+}
+header{
+  background:white;
+  padding:18px 7%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:15px;
+  box-shadow:0 2px 12px #10213d12;
+}
+.logo{font-size:25px;font-weight:bold;color:var(--blue)}
+.logo span{color:var(--green)}
+nav{display:flex;gap:10px;flex-wrap:wrap}
+nav button{
+  border:0;background:transparent;padding:10px;
+  cursor:pointer;font-weight:bold;color:var(--dark);
+}
+nav button:hover{color:var(--blue)}
+main{max-width:1100px;margin:auto;padding:35px 20px}
+section{display:none}
+section.active{display:block}
+.hero{
+  background:linear-gradient(120deg,#082e70,#0878d8);
+  color:white;padding:65px 40px;border-radius:22px;
+}
+.hero h1{font-size:42px;margin:0 0 15px}
+.hero p{font-size:18px;line-height:1.6;max-width:650px}
+.btn{
+  background:var(--green);color:white;border:0;
+  padding:13px 22px;border-radius:9px;
+  cursor:pointer;font-weight:bold;margin-top:12px;
+}
+.btn:hover{opacity:.88}
+.cards{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:18px;margin-top:25px;
+}
+.card{
+  background:white;padding:24px;border-radius:15px;
+  box-shadow:0 4px 15px #10213d10;
+}
+.card h3{color:var(--blue)}
+.icon{font-size:32px}
+h2{color:var(--blue)}
+p{line-height:1.65}
+.item{
+  background:white;padding:18px;margin:12px 0;
+  border-radius:12px;border-left:5px solid var(--green);
+}
+.question{
+  background:white;padding:24px;border-radius:15px;margin:18px 0;
+}
+.question label{display:block;padding:12px;margin:8px 0;
+background:#f2f7ff;border-radius:8px;cursor:pointer}
+.question label:hover{background:#e0edff}
+input[type=radio]{margin-right:10px}
+#result{
+  background:#e1f7ed;padding:22px;border-radius:12px;
+  margin-top:20px;display:none;
+}
+footer{
+  text-align:center;padding:25px;background:#10213d;color:white;
+  margin-top:40px;
+}
+@media(max-width:600px){
+ .hero{padding:35px 22px}
+ .hero h1{font-size:30px}
+ header{justify-content:center}
+ nav{justify-content:center}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">🛡️ Cyber<span>Safe</span></div>
+  <nav>
+    <button onclick="show('home')">Início</button>
+    <button onclick="show('educacao')">Conteúdos</button>
+    <button onclick="show('guia')">Guia de proteção</button>
+    <button onclick="show('quiz')">Quiz</button>
+  </nav>
+</header>
+
+<main>
+
+<section id="home" class="active">
+  <div class="hero">
+    <h1>Sua segurança começa com conhecimento!</h1>
+    <p>
+      Aprenda a identificar golpes virtuais, proteger suas
+      informações pessoais e navegar na internet com mais segurança.
+    </p>
+    <button class="btn" onclick="show('educacao')">
+      Explorar conteúdos →
+    </button>
+    <button class="btn" onclick="show('quiz')">
+      Fazer o quiz
+    </button>
+  </div>
+
+  <h2>Conheça o CyberSafe</h2>
+  <p>
+    Uma plataforma educativa criada para ajudar estudantes
+    e a comunidade a desenvolver hábitos seguros no ambiente digital.
+  </p>
+
+  <div class="cards">
+    <div class="card">
+      <div class="icon">🎣</div>
+      <h3>Identifique golpes</h3>
+      <p>Aprenda a reconhecer mensagens falsas e tentativas de fraude.</p>
+    </div>
+    <div class="card">
+      <div class="icon">🔐</div>
+      <h3>Proteja suas contas</h3>
+      <p>Descubra como criar senhas fortes e proteger seus acessos.</p>
+    </div>
+    <div class="card">
+      <div class="icon">🔒</div>
+      <h3>Cuide da privacidade</h3>
+      <p>Saiba como proteger seus dados pessoais na internet.</p>
+    </div>
+  </div>
+</section>
+
+<section id="educacao">
+  <h2>📚 Central Educativa</h2>
+  <p>Conheça algumas das principais ameaças digitais.</p>
+
+  <div class="item">
+    <h3>🎣 Phishing</h3>
+    <p>
+      É uma tentativa de golpe em que criminosos enviam mensagens
+      falsas para convencer pessoas a fornecer senhas, dados bancários
+      ou informações pessoais.
+    </p>
+    <strong>Como evitar:</strong>
+    <p>Verifique o remetente e não clique em links suspeitos.</p>
+  </div>
+
+  <div class="item">
+    <h3>💬 Golpes em aplicativos de mensagens</h3>
+    <p>
+      Criminosos podem se passar por familiares, amigos ou empresas
+      para solicitar dinheiro e informações pessoais.
+    </p>
+    <strong>Como evitar:</strong>
+    <p>Confirme a identidade da pessoa por outro canal antes de realizar pagamentos.</p>
+  </div>
+
+  <div class="item">
+    <h3>🛒 Fraudes em lojas virtuais</h3>
+    <p>
+      Sites falsos podem oferecer produtos com preços muito baixos
+      para atrair vítimas e roubar dados financeiros.
+    </p>
+    <strong>Como evitar:</strong>
+    <p>Pesquise a reputação da loja e confira o endereço do site.</p>
+  </div>
+
+  <div class="item">
+    <h3>📱 Roubo de contas</h3>
+    <p>
+      Acontece quando alguém consegue acesso não autorizado
+      a uma conta de rede social, e-mail ou aplicativo.
+    </p>
+    <strong>Como evitar:</strong>
+    <p>Ative a autenticação em dois fatores e nunca compartilhe códigos de acesso.</p>
+  </div>
+</section>
+
+<section id="guia">
+  <h2>🔐 Guia de Proteção Digital</h2>
+  <p>Confira algumas práticas para manter sua segurança online.</p>
+
+  <div class="item">
+    <h3>1. Utilize senhas fortes</h3>
+    <p>Crie senhas longas, únicas e difíceis de adivinhar. Evite utilizar a mesma senha em diferentes serviços.</p>
+  </div>
+  <div class="item">
+    <h3>2. Ative a autenticação em dois fatores</h3>
+    <p>Utilize uma segunda etapa de verificação para dificultar acessos não autorizados.</p>
+  </div>
+  <div class="item">
+    <h3>3. Não compartilhe informações pessoais</h3>
+    <p>Evite divulgar endereço, documentos, dados bancários e informações particulares publicamente.</p>
+  </div>
+  <div class="item">
+    <h3>4. Desconfie de links desconhecidos</h3>
+    <p>Não abra links recebidos de remetentes suspeitos e confira os endereços dos sites.</p>
+  </div>
+  <div class="item">
+    <h3>5. Mantenha seus dispositivos atualizados</h3>
+    <p>Instale atualizações de segurança do sistema operacional e dos aplicativos.</p>
+  </div>
+  <div class="item">
+    <h3>6. Utilize redes Wi-Fi com cuidado</h3>
+    <p>Evite realizar operações sensíveis em redes públicas desconhecidas.</p>
+  </div>
+</section>
+
+<section id="quiz">
+  <h2>🧠 Quiz de Segurança Digital</h2>
+  <p>Responda às perguntas e teste seus conhecimentos!</p>
+
+  <form id="quizForm">
+    <div class="question">
+      <h3>1. O que é phishing?</h3>
+      <label><input type="radio" name="q1" value="0"> Um programa de edição.</label>
+      <label><input type="radio" name="q1" value="1"> Um golpe para roubar informações.</label>
+      <label><input type="radio" name="q1" value="0"> Um tipo de rede social.</label>
+    </div>
+
+    <div class="question">
+      <h3>2. Qual é a melhor atitude ao receber um link suspeito?</h3>
+      <label><input type="radio" name="q2" value="0"> Clicar imediatamente.</label>
+      <label><input type="radio" name="q2" value="1"> Verificar a origem antes de acessar.</label>
+      <label><input type="radio" name="q2" value="0"> Compartilhar com amigos.</label>
+    </div>
+
+    <div class="question">
+      <h3>3. Para que serve a autenticação em dois fatores?</h3>
+      <label><input type="radio" name="q3" value="1"> Adicionar uma etapa extra de segurança.</label>
+      <label><input type="radio" name="q3" value="0"> Aumentar a velocidade da internet.</label>
+      <label><input type="radio" name="q3" value="0"> Compartilhar senhas.</label>
+    </div>
+
+    <div class="question">
+      <h3>4. Como deve ser uma senha segura?</h3>
+      <label><input type="radio" name="q4" value="0"> Apenas a data de nascimento.</label>
+      <label><input type="radio" name="q4" value="0"> O nome do usuário.</label>
+      <label><input type="radio" name="q4" value="1"> Longa, única e difícil de adivinhar.</label>
+    </div>
+
+    <div class="question">
+      <h3>5. O que fazer ao receber um pedido de dinheiro suspeito?</h3>
+      <label><input type="radio" name="q5" value="0"> Transferir imediatamente.</label>
+      <label><input type="radio" name="q5" value="1"> Confirmar a identidade por outro canal.</label>
+      <label><input type="radio" name="q5" value="0"> Enviar seus dados pessoais.</label>
+    </div>
+
+    <button type="submit" class="btn">Finalizar quiz</button>
+  </form>
+
+  <div id="result"></div>
+</section>
+
+</main>
+
+<footer>
+  <strong>🛡️ CyberSafe</strong>
+  <p>Educação digital para uma internet mais segura.</p>
+  <small>Projeto acadêmico | 2026</small>
+</footer>
+
+<script>
+function show(page){
+  document.querySelectorAll('main section').forEach(s=>{
+    s.classList.remove('active');
+  });
+  document.getElementById(page).classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+document.getElementById('quizForm').addEventListener('submit',function(e){
+  e.preventDefault();
+
+  let score=0;
+  let answered=0;
+  const total=5;
+
+  for(let i=1;i<=total;i++){
+    const answer=document.querySelector('input[name="q'+i+'"]:checked');
+    if(answer){
+      answered++;
+      score+=Number(answer.value);
+    }
+  }
+
+  if(answered<total){
+    alert('Responda todas as perguntas antes de finalizar!');
+    return;
+  }
+
+  const result=document.getElementById('result');
+  const percentage=score*20;
+
+  let message=score>=4
+    ? 'Parabéns! Você demonstrou bons conhecimentos sobre segurança digital.'
+    : 'Continue estudando! Consulte os conteúdos e tente novamente.';
+
+  result.style.display='block';
+  result.innerHTML=`
+    <h2>Resultado do seu quiz</h2>
+    <h1>${score} de ${total} acertos</h1>
+    <h3>${percentage}% de aproveitamento</h3>
+    <p>${message}</p>
+    <button class="btn" onclick="document.getElementById('quizForm').reset();document.getElementById('result').style.display='none'">
+      Refazer quiz
+    </button>
+  `;
+
+  result.scrollIntoView({behavior:'smooth'});
+});
+</script>
+</body>
+</html>
